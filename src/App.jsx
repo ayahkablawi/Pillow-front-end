@@ -12,7 +12,7 @@ function App() {
       {/* Navigation */}
       <nav style={{
         display: 'flex',
-        gap: '2rem',
+        gap: '22rem',
         padding: '1.5rem',
         backgroundColor: '#f5f5f5',
         width: '100%',
