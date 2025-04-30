@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Profile from './components/Profile';
@@ -7,6 +7,20 @@ import Signup from './components/Signup';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const getData = async () => {
+        const response = await fetch('18.217.185.247:7007/pillow/listing/', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+        console.log(response.body)
+       // const JSONdata = await response.json()
+       // console.log(JSONdata)
+    }
+    getData();
+}, [])
   return (
     <Router>
       {/* Navigation */}
