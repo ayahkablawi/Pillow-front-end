@@ -4,7 +4,8 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import './App.css';
+import './App.css'; 
+
 
 function App() {
   return (

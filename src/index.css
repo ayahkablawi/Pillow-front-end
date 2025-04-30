@@ -66,3 +66,38 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.listing-card {
+  max-width: 400px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: white;
+  margin: 1rem auto;
+}
+
+.listing-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.listing-details {
+  padding-top: 1rem;
+}
+
+.listing-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.listing-price,
+.listing-bedrooms,
+.listing-by {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 0.25rem;
+}
