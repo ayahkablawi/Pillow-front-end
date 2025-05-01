@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Username:', username);
-    console.log('Password:', password);
+   
+     // fake login check
+     if (username && password) {
+      setIsLoggedIn(true); // tell the app we're logged in
+      navigate('/profile'); // go to profile page
+    } else {
+      alert('Try again');
+    }
   };
+
   return (
     <main style={{ textAlign: 'center', padding: '2rem' }}>
       <h2>Log In</h2>
