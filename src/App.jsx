@@ -9,18 +9,14 @@ import './App.css';
 function App() {
   useEffect(() => {
     const getData = async () => {
-        const response = await fetch('18.217.185.247:7007/pillow/listing/', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+        const response = await fetch('http://18.217.185.247:7007/pillow/listing/', {
         })
-        console.log(response.body)
-       // const JSONdata = await response.json()
-       // console.log(JSONdata)
+        const data = await response.json();
+        console.log(data)
     }
     getData();
 }, [])
+
   return (
     <Router>
       {/* Navigation */}
