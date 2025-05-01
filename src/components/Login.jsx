@@ -6,15 +6,35 @@ const Login = ({ setIsLoggedIn }) => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   
-     // fake login check
-     if (username && password) {
-      setIsLoggedIn(true); // tell the app we're logged in
-      navigate('/profile'); // go to profile page
-    } else {
-      alert('Try again');
+  
+    // send the login info to the backend
+    try {
+      const res = await fetch('http://localhost:4000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password
+        })
+      });
+  
+      const data = await res.json();
+  
+      if (res.ok) {
+        // login worked
+        setIsLoggedIn(true);
+        navigate('/profile');
+      } else {
+        // login didn't work
+        alert(data.message || 'Login failed.');
+      }
+    } catch (err) {
+      console.log('error logging in:', err);
+      alert('something went wrong');
     }
   };
 
