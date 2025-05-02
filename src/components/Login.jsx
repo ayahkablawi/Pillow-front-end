@@ -11,7 +11,8 @@ const Login = ({ setIsLoggedIn }) => {
   
     // send the login info to the backend
     try {
-      const res = await fetch('http://localhost:4000/api/login', {
+      console.log(e)
+      const res = await fetch('http://18.217.185.247:7007/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -44,6 +45,7 @@ const Login = ({ setIsLoggedIn }) => {
 
       <form onSubmit={handleSubmit}>
         <input
+        name= 'name'
           type="text"
           placeholder="Username"
           value={username}
@@ -52,6 +54,7 @@ const Login = ({ setIsLoggedIn }) => {
         /><br />
 
         <input
+        name= 'password'
           type="password"
           placeholder="Password"
           value={password}
