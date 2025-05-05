@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import ListingCard from './components/ListingCard'
 import UpdateCard from './components/UpdateCard'
+import Sell from './components/Sell'
 import './App.css';
 
 const listing = () => {
@@ -60,7 +61,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={isLoggedIn ? <Profile /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/buy" element={<h1>Buy a Home</h1>} />
-          <Route path="/sell" element={<h1>Sell Your Home</h1>} />
+          <Route path="/sell" element={<Sell/>} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/listing" element={<ListingCard listing={listing} />} />
