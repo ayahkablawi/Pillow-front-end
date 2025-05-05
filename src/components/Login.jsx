@@ -33,10 +33,10 @@ const Login = ({ setIsLoggedIn }) => {
         // login didn't work
         alert(data.message || 'Login failed.');
       }
-    } catch (err) {
-      console.log('error logging in:', err);
-      alert('something went wrong');
-    }
+     } catch (err) {
+        console.error('Error logging in:', err);
+        alert(err.message || 'Something went wrong. Please try again.');
+      }
   };
 
   return (
