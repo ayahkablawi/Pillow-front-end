@@ -4,7 +4,19 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import ListingCard from './components/ListingCard'
 import './App.css';
+
+const listing = () => {
+  // Mock data for testing
+  const listing = {
+    title: "Modern Apartment",
+    price: "250000000.00",
+    image: "http://localhost:8000/media/listing_images/white_walled/apartment.jpg",
+    bedrooms: 2,
+    listed_by: "joe_dirt",
+  };
+}
 
 
 function App() {
@@ -32,7 +44,8 @@ function App() {
         <Link to="/sell">Sell</Link>
       </nav>
 
-      <div style={{ marginTop: '100px'}}>
+     
+      <div style={{ marginTop: '100px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={isLoggedIn ? <Profile /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
@@ -40,6 +53,7 @@ function App() {
           <Route path="/sell" element={<h1>Sell Your Home</h1>} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/listing" element={<ListingCard listing={listing} />} />
         </Routes>
       </div>
     </Router>

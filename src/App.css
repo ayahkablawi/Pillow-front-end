@@ -40,3 +40,82 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Styling for the listing card */
+.listing-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 300px;
+  padding: 16px;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.listing-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Styling for the image */
+.listing-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Styling for the details section */
+.listing-details {
+  margin-top: 12px;
+}
+
+/* Title styling */
+.listing-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Price styling */
+.listing-price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e74c3c;
+  margin-bottom: 8px;
+}
+
+/* Bedroom count styling */
+.listing-bedrooms,
+.listing-by {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Styling for the favorite button */
+.favorite-button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #555;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+/* Change button color when favorited */
+.favorite-button.favorited {
+  color: red;
+  border-color: red;
+}
+
+.favorite-button:hover {
+  background-color: #f8f8f8;
+}
