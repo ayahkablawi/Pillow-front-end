@@ -15,14 +15,15 @@ function App() {
       <nav style={{
         display: 'flex',
         gap: '12rem',
+        alignItems: 'flex-end',
         padding: '2rem 4rem', 
         backgroundColor: '#E6F4F1',
         position: 'fixed',
         top: 0,
         left: 0,
         width: '100%',
-        zIndex: 1000
-    
+        zIndex: 1000,
+        fontSize: '1.5rem',
       }}>
         <img src="/logo.png" alt="Logo" style={{ height: '70px' }} />
         <Link to="/">Home</Link>
@@ -31,7 +32,7 @@ function App() {
         <Link to="/sell">Sell</Link>
       </nav>
 
-      <div style={{ marginTop: '100px' }}>
+      <div style={{ marginTop: '100px'}}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={isLoggedIn ? <Profile /> : <Login setIsLoggedIn={setIsLoggedIn} />} />

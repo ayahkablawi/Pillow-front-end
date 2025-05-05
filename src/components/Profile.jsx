@@ -7,7 +7,7 @@ const Profile = () => {
     <main style={{ textAlign: 'center', padding: '2rem' }}>
       <h1>Your Profile</h1>
       <h2>Your saved listings!</h2>
-      <p>Member since: March 2025</p>
+      <p>Member since: April 2025</p>
 
       <button onClick={() => setShowFavs(!showFavs)} style={{ marginTop: '1rem', padding: '0.5rem 1rem' }}>
         {showFavs ? 'Hide Favorites' : 'Show Favorites'}
