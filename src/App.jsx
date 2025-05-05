@@ -37,6 +37,7 @@ function App() {
         width: '100%',
         zIndex: 1000,
         fontSize: '1.5rem',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
       }}>
         <img src="/logo.png" alt="Logo" style={{ height: '70px' }} />
         <Link to="/">Home</Link>
