@@ -24,7 +24,7 @@ const UpdateListingForm = ({ onUpdateComplete }) => { //React component with two
       ...prev, //updates the changed field while keeping the others in tact
       [update.target.name]: update.target.value //uses the name attribute to update the correct key in the form data
     }));
-  };
+  }; //test comment
 
   
 
