@@ -23,7 +23,7 @@ function App() {
         width: '100%',
         zIndex: 1000
       }}>
-        <img src="../public/logo.png" alt="Logo" style={{ height: '40px' }} />
+        <img src="/logo.png" alt="Logo" style={{ height: '40px' }} />
         <Link to="/">Home</Link>
         {isLoggedIn && <Link to="/profile">Profile</Link>}
         <Link to="/buy">Buy</Link>
