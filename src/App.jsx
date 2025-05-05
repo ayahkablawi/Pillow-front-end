@@ -5,6 +5,7 @@ import Profile from './components/Profile';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import ListingCard from './components/ListingCard'
+import UpdateCard from './components/UpdateCard'
 import './App.css';
 
 const listing = () => {
@@ -40,8 +41,18 @@ function App() {
         <img src="/logo.png" alt="Logo" style={{ height: '70px' }} />
         <Link to="/">Home</Link>
         {isLoggedIn && <Link to="/profile">Profile</Link>}
-        <Link to="/buy">Buy</Link>
+        <Link to="/listing">Buy</Link>
         <Link to="/sell">Sell</Link>
+
+        <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <Link to="/login">
+          <button style={{ padding: '0.75rem 1.5rem' }}>Log In</button>
+        </Link>
+        <Link to="/signup">
+          <button style={{ padding: '0.75rem 1.5rem' }}>Sign Up</button>
+        </Link>
+        
+      </div>
       </nav>
 
      
@@ -54,6 +65,7 @@ function App() {
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/listing" element={<ListingCard listing={listing} />} />
+          <Route path="/update" element={<UpdateCard/>} />
         </Routes>
       </div>
     </Router>
