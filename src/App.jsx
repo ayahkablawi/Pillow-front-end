@@ -5,6 +5,7 @@ import Profile from './components/Profile';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import './App.css';
+import logo from './assets/logo.png'; 
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         width: '100%',
         zIndex: 1000
       }}>
+        <img src={logo} alt="Logo" style={{ height: '40px' }} />
         <Link to="/">Home</Link>
         {isLoggedIn && <Link to="/profile">Profile</Link>}
         <Link to="/buy">Buy</Link>
