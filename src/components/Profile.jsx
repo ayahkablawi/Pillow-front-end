@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// src/components/Profile.jsx
+import {React, useState} from 'react';
 
 const Profile = () => {
   const [showFavs, setShowFavs] = useState(false);

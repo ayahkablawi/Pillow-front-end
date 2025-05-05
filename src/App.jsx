@@ -44,7 +44,6 @@ function App() {
         {isLoggedIn && <Link to="/profile">Profile</Link>}
         <Link to="/listing">Buy</Link>
         <Link to="/sell">Sell</Link>
-
         <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
         <Link to="/login">
           <button style={{ padding: '0.75rem 1.5rem' }}>Log In</button>
@@ -52,7 +51,6 @@ function App() {
         <Link to="/signup">
           <button style={{ padding: '0.75rem 1.5rem' }}>Sign Up</button>
         </Link>
-        
       </div>
       </nav>
 

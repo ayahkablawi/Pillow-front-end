@@ -11,14 +11,13 @@ const Login = ({ setIsLoggedIn }) => {
   
     // send the login info to the backend
     try {
-      console.log(e)
-      const res = await fetch('http://18.217.185.247:7007/user', {
+      const res = await fetch('http://18.217.185.247:7007/user/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          username: username,
+          name: username,
           password: password
         })
       });
