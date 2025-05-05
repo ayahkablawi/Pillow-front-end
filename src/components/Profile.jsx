@@ -21,7 +21,6 @@ const Profile = () => {
           borderRadius: '8px',
           maxWidth: '400px',
           marginInline: 'auto',
-          backgroundColor: '#f9f9f9'
         }}>
           <h3>Favorites</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>

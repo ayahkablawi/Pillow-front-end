@@ -14,16 +14,17 @@ function App() {
     <Router>
       <nav style={{
         display: 'flex',
-        gap: '2rem',
-        padding: '1.5rem',
-        backgroundColor: '#f5f5f5',
+        gap: '12rem',
+        padding: '2rem 4rem', 
+        backgroundColor: '#E6F4F1',
         position: 'fixed',
         top: 0,
         left: 0,
         width: '100%',
         zIndex: 1000
+    
       }}>
-        <img src="/logo.png" alt="Logo" style={{ height: '40px' }} />
+        <img src="/logo.png" alt="Logo" style={{ height: '70px' }} />
         <Link to="/">Home</Link>
         {isLoggedIn && <Link to="/profile">Profile</Link>}
         <Link to="/buy">Buy</Link>
