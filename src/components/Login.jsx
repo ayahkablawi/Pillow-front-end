@@ -39,7 +39,7 @@ const Login = ({ setIsLoggedIn }) => {
   };
 
   return (
-    <main style={{ textAlign: 'center', padding: '2rem' }}>
+   <main className="login-main">
       <h2>Log In</h2>
 
       <form onSubmit={handleSubmit}>

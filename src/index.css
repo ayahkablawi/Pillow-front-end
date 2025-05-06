@@ -25,12 +25,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -58,9 +52,5 @@ button:focus-visible {
   }
   a:hover {
     color: #747bff;
-  }
-  button {
-    background: linear-gradient(to bottom right, #e6f4f1, #f8fbfc);
-    background-color: #0E7BC2;
   }
 }

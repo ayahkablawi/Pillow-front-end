@@ -1,10 +1,8 @@
 import {React, useState} from 'react';
 
 const Home = () => {
-
-
   return (
-    <main style={{ textAlign: 'center', padding: '2rem' }}>
+      <main className="home-main">
       <h1>Welcome to Pillow</h1>
       <p>Find your dream home today.</p>
 
