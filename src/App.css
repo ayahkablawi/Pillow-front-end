@@ -4,9 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 /* Styling for the listing card */
 .listing-card {
   border: 1px solid #ddd;
@@ -120,7 +117,7 @@
   background-color: rgba(44, 135, 214, 0.1);
 }
 
-.home-main {
+.home-main { /*used in home.jsx */
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -200,12 +197,12 @@
   background-color: #005f99;
 }
 
-.profile-main {
+.profile-main { 
   text-align: center;
   padding: 2rem;
 }
 
-.favorites-toggle-button {
+.favorites-toggle-button {/*Button toggles showing/hiding favorite listings*/
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;

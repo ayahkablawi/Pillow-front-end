@@ -38,11 +38,11 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #006494;
+  border-color: #006494; /*Adds a dark blue background on hover*/
   background-color: #005f99;
 }
 button:focus,
-button:focus-visible {
+button:focus-visible { /*Adds a focus outline for accessibility*/
   outline: 4px auto -webkit-focus-ring-color;
 }
 
