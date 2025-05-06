@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; 
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Login from './components/Login';
@@ -21,12 +21,12 @@ const listing = () => {
 }
 
 
-function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+function App() { // Defines main app component
+  const [isLoggedIn, setIsLoggedIn] = useState(false); //isLoggedIn keeps track of the user's login status
+//setIsLoggedIn() is passed down to Login so that it can mark the user as logged in
   return (
     <Router>
-      <nav style={{
+      <nav style={{ 
         display: 'flex',
         gap: '12rem',
         alignItems: 'flex-end',
@@ -42,7 +42,7 @@ function App() {
       }}>
         <img src="/logo.png" alt="Logo" style={{ height: '70px' }} />
         <Link to="/">Home</Link>
-        {isLoggedIn && <Link to="/profile">Profile</Link>}
+        {isLoggedIn && <Link to="/profile">Profile</Link>} 
         <Link to="/listing">Buy</Link>
         <Link to="/sell">Sell</Link>
         <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
@@ -60,7 +60,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={isLoggedIn ? <Profile /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path="/buy" element={<h1>Buy a Home</h1>} />
+          <Route path="/buy" element={<h1>Buy a Home</h1>} /> 
           <Route path="/sell" element={<Sell/>} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<Signup />} />
@@ -72,4 +72,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; //Makes this main component available for rendering in main.jsx

@@ -10,4 +10,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home; //Makes the Home component available to other parts of your app (like in App.jsx).
+// react uses line 13 to render routes

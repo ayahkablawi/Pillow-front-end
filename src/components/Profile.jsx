@@ -1,5 +1,4 @@
-// src/components/Profile.jsx
-import {React, useState} from 'react';
+import {React, useState} from 'react'; // Brings in React so you can use JSX. useState is a hook that lets you create a piece of state 
 
 const Profile = () => {
   const [showFavs, setShowFavs] = useState(false);
@@ -14,7 +13,7 @@ const Profile = () => {
         {showFavs ? 'Hide Favorites' : 'Show Favorites'}
       </button>
 
-      {showFavs && (
+      {showFavs && ( //This section only renders if showFavs is true
         <div style={{
           marginTop: '2rem',
           padding: '1rem',
@@ -23,7 +22,7 @@ const Profile = () => {
           maxWidth: '400px',
           marginInline: 'auto',
         }}>
-          <h3>Favorites</h3>
+          <h3>Favorites</h3> 
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li>🏠 Modern Loft in NYC</li>
             <li>🌲 Cozy Cabin in Washington</li>
@@ -35,4 +34,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Profile; //Makes this component available to use in routes (like in App.jsx)
