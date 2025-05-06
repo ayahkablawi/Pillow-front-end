@@ -51,7 +51,8 @@ const ListingCard = (props) => { // functional component with one prop, listing.
 
 
   return ( //begins the jsx block.  Looks like HTML, it's actually javascript      
-    <>
+    <div className='listing-container'>
+      <h1>Listings</h1>
       {listings.map((listing, index) => (
         <div className="listing-card" key={listing.id}>
           {listing.image && ( //conditional rendering statement.  If there's no image it won't be mad.
@@ -90,7 +91,7 @@ const ListingCard = (props) => { // functional component with one prop, listing.
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

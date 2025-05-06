@@ -120,6 +120,15 @@
   background-color: rgba(44, 135, 214, 0.1);
 }
 
+.home-main {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
 /* Delete button - red highlight */
 .delete-button {
   color: #e74c3c;

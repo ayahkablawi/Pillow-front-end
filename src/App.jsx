@@ -33,6 +33,7 @@ function App() { // Defines main app component
         padding: '2rem 4rem', 
         backgroundColor: '#E6F4F1',
         position: 'fixed',
+        justifyContent: 'space-evenly',
         top: 0,
         left: 0,
         width: '100%',
@@ -56,7 +57,7 @@ function App() { // Defines main app component
       </nav>
 
      
-      <div style={{ marginTop: '100px' }}>
+      <div style={{ display: 'flex', alignItems:'center', justifyContent:'center',marginTop: '100px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={isLoggedIn ? <Profile /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
