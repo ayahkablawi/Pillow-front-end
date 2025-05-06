@@ -49,30 +49,34 @@ const UpdateListingForm = ({ onUpdateComplete }) => { //React component with two
   };
   //What is displayed on the page.
   return ( 
-    <form onSubmit={handleSubmit} className="update-form">
-      <input
-        type="text"
-        name="title"
-        value={formData.title}
-        onChange={handleChange}
-        placeholder="Title"
-      />
-      <input
-        type="number"
-        name="price"
-        value={formData.price}
-        onChange={handleChange}
-        placeholder="Price"
-      />
-      <input
-        type="number"
-        name="bedrooms"
-        value={formData.bedrooms}
-        onChange={handleChange}
-        placeholder="Bedrooms"
-      />
-      <button type="submit">Save</button>
-    </form>
+    <div className="update-form">
+      <h1>Listings</h1> 
+      <h3>Edit Listing:</h3>
+      <form onSubmit={handleSubmit} className="update-form">
+        <input
+          type="text"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          placeholder="Title"
+        />
+        <input
+          type="number"
+          name="price"
+          value={formData.price}
+          onChange={handleChange}
+          placeholder="Price"
+        />
+        <input
+          type="number"
+          name="bedrooms"
+          value={formData.bedrooms}
+          onChange={handleChange}
+          placeholder="Bedrooms"
+        />
+        <button type="submit">Save</button>
+      </form>
+    </div>
   );
 };
 
